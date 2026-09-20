@@ -1,0 +1,58 @@
+LineSentinel AI - QC Random Forest Training Report
+============================================================
+
+{
+  "records_total": 944,
+  "records_labeled_pass_fail": 907,
+  "records_train": 725,
+  "records_test": 182,
+  "target_definition": "FAIL = 1, PASS = 0",
+  "features_used": [
+    "line_id",
+    "product_code",
+    "inspector_id",
+    "units_inspected",
+    "inspection_year",
+    "inspection_month",
+    "inspection_dayofweek"
+  ],
+  "excluded_outcome_derived_fields": [
+    "defect_count",
+    "units_passed",
+    "defect_type",
+    "qc_result"
+  ],
+  "accuracy": 0.7252747252747253,
+  "precision_fail": 0.24,
+  "recall_fail": 0.16216216216216217,
+  "f1_fail": 0.1935483870967742,
+  "confusion_matrix_labels": [
+    "PASS",
+    "FAIL"
+  ],
+  "confusion_matrix": [
+    [
+      126,
+      19
+    ],
+    [
+      31,
+      6
+    ]
+  ],
+  "class_counts": {
+    "0": 724,
+    "1": 183
+  }
+}
+
+Classification report
+------------------------------
+              precision    recall  f1-score   support
+
+        PASS       0.80      0.87      0.83       145
+        FAIL       0.24      0.16      0.19        37
+
+    accuracy                           0.73       182
+   macro avg       0.52      0.52      0.51       182
+weighted avg       0.69      0.73      0.70       182
